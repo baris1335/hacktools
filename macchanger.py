@@ -13,7 +13,7 @@ def old_mac(interface, mac):
     mac_control = subprocess.check_output(["ifconfig", interface])
     old_macaddr = regex.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", str(mac_control))
     if old_macaddr.group(0) == mac:
-        print("Your mac was already " + old_macaddr.group(0))
+        print("Your mac is already " + old_macaddr.group(0))
         exit()
     else:
        return None
